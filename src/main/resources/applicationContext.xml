@@ -16,6 +16,14 @@
           class="ru.alexsem.springcource.RockMusic">
     </bean>
 
+    <bean id="musicBean1"
+          class="ru.alexsem.springcource.ClassicalMusic">
+    </bean>
+
+    <bean id="musicBean2"
+          class="ru.alexsem.springcource.RapMusic">
+    </bean>
+
     <bean id="musicPlayer"
           class="ru.alexsem.springcource.MusicPlayer">
         <constructor-arg ref="musicBean"/>
@@ -23,18 +31,31 @@
 
 
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
-<!--    bean == instance of a class (object)-->
+    <!--    bean == instance of a class (object)-->
     <bean id="musicPlayer6"
           class="ru.alexsem.springcource.MusicPlayerLesson6">
         <!--        Spring looks for setter setMusic and takes the value.
         In this case there is a no-arg constructor provided by default.
         We don't specify it below-->
         <property name="music" ref="musicBean"/>
-<!--        This is bean fields initialization-->
-<!--        <property name="name" value="Some name"/>-->
-<!--        <property name="volume" value="50"/>-->
+        <!--        This is bean fields initialization-->
+        <!--        <property name="name" value="Some name"/>-->
+        <!--        <property name="volume" value="50"/>-->
         <property name="name" value="${musicPlayer6.name}"/>
         <property name="volume" value="${musicPlayer6.volume}"/>
+    </bean>
+
+
+    <!--    Collections-->
+    <bean id="musicPlayerHomework"
+          class="ru.alexsem.springcource.MusicPlayerHomework">
+        <property name="musicList">
+            <list>
+                <ref bean="musicBean"/>
+                <ref bean="musicBean1"/>
+                <ref bean="musicBean2"/>
+            </list>
+        </property>
     </bean>
 
 </beans>
