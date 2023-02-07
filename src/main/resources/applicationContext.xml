@@ -16,5 +16,9 @@
           class="ru.alexsem.springcource.RockMusic">
     </bean>
 
+    <bean id="musicPlayer"
+          class="ru.alexsem.springcource.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
 
 </beans>
