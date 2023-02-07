@@ -12,4 +12,9 @@
         <constructor-arg value="Aleksandr"/>
     </bean>
 
+    <bean id="musicBean"
+          class="ru.alexsem.springcource.RockMusic">
+    </bean>
+
+
 </beans>
