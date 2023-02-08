@@ -9,7 +9,8 @@
 
     <bean id="testBean"
           class="ru.alexsem.springcource.TestBean">
-        <constructor-arg value="Aleksandr"/>
+        <constructor-arg type="java.lang.String" value="Aleksandr"/>
+        <constructor-arg type="int" value="35"/>
     </bean>
 
     <bean id="musicBean"
