@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    by default bean scope is Singletone-->
+    <bean id="musicBean"
+          class="ru.alexsem.springcource.RockMusic">
+    </bean>
+
+    <bean id="musicPlayer7"
+          class="ru.alexsem.springcource.MusicPlayer7"
+          scope="prototype">
+        <property name="music" ref="musicBean"/>
+        <property name="volume" value="50"/>
+        <property name="name" value="Some name"/>
+    </bean>
+</beans>
