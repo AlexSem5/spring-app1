@@ -9,14 +9,18 @@
 
     <!--    by default bean scope is Singletone-->
     <bean id="musicBean"
-          class="ru.alexsem.springcource.RockMusic">
+          class="ru.alexsem.springcource.ClassicalMusic"
+          scope="prototype"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          factory-method="getClassicalMusic">
     </bean>
 
-    <bean id="musicPlayer7"
-          class="ru.alexsem.springcource.MusicPlayer7"
-          scope="prototype">
-        <property name="music" ref="musicBean"/>
-        <property name="volume" value="50"/>
-        <property name="name" value="Some name"/>
-    </bean>
+<!--    <bean id="musicPlayer7"-->
+<!--          class="ru.alexsem.springcource.MusicPlayer7"-->
+<!--          scope="prototype">-->
+<!--        <property name="music" ref="musicBean"/>-->
+<!--        <property name="volume" value="50"/>-->
+<!--        <property name="name" value="Some name"/>-->
+<!--    </bean>-->
 </beans>
