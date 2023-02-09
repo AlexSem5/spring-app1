@@ -5,6 +5,10 @@ public class MusicPlayer7 {
     private String name;
     private int volume;
     
+    public void doMyInit() {
+        System.out.println("Music Player Initialization");
+    }
+    
     public String getName() {
         return name;
     }
