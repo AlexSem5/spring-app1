@@ -1,4 +1,4 @@
-package ru.alexsem.springcource;
+package ru.alexsem.springcourse;
 
 public class TestBean {
     private String name;

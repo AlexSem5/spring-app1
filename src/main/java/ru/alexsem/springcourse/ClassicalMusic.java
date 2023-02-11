@@ -1,6 +1,5 @@
-package ru.alexsem.springcource;
+package ru.alexsem.springcourse;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 @Component
 //@Scope("prototype")

@@ -12,7 +12,7 @@
     нашего бина есть изменяемые состояния (stateful).
     Beans configurations-->
     <bean id="musicBean"
-          class="ru.alexsem.springcource.ClassicalMusic"
+          class="ru.alexsem.springcourse.ClassicalMusic"
           scope="prototype"
           init-method="doMyInit"
           destroy-method="doMyDestroy"
@@ -20,7 +20,7 @@
     </bean>
 
     <bean id="musicPlayer7"
-          class="ru.alexsem.springcource.MusicPlayer7"
+          class="ru.alexsem.springcourse.MusicPlayer7"
           init-method="doMyInit"
           scope="prototype">
 <!--        This is bean fields initialization-->

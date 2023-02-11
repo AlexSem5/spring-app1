@@ -1,4 +1,4 @@
-package ru.alexsem.springcource;
+package ru.alexsem.springcourse;
 
 public class MusicPlayer {
     private Music music;

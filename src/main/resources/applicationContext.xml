@@ -15,26 +15,26 @@
       </bean>-->
 
     <bean id="testBean"
-          class="ru.alexsem.springcource.TestBean">
+          class="ru.alexsem.springcourse.TestBean">
         <!--        This is bean fields initialization-->
         <constructor-arg type="java.lang.String" value="Aleksandr"/>
         <constructor-arg type="int" value="35"/>
     </bean>
 
     <bean id="musicBean"
-          class="ru.alexsem.springcource.RockMusic">
+          class="ru.alexsem.springcourse.RockMusic">
     </bean>
 
     <bean id="musicBean1"
-          class="ru.alexsem.springcource.ClassicalMusic">
+          class="ru.alexsem.springcourse.ClassicalMusic">
     </bean>
 
     <bean id="musicBean2"
-          class="ru.alexsem.springcource.RapMusic">
+          class="ru.alexsem.springcourse.RapMusic">
     </bean>
 
     <bean id="musicPlayer"
-          class="ru.alexsem.springcource.MusicPlayer">
+          class="ru.alexsem.springcourse.MusicPlayer">
         <!--        This is bean fields initialization-->
         <constructor-arg ref="musicBean"/>
     </bean>
@@ -43,7 +43,7 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
     <!--    bean == instance of a class (object)-->
     <bean id="musicPlayer6"
-          class="ru.alexsem.springcource.MusicPlayerLesson6">
+          class="ru.alexsem.springcourse.MusicPlayerLesson6">
         <!--        Spring looks for setter setMusic and takes the value.
         In this case there is a no-arg constructor provided by default.
         We don't specify it below-->
@@ -56,7 +56,7 @@
 
     <!--    Collections-->
     <bean id="musicPlayerHomework"
-          class="ru.alexsem.springcource.MusicPlayerHomework">
+          class="ru.alexsem.springcourse.MusicPlayerHomework">
         <!--        This is bean fields initialization-->
         <property name="musicList">
             <list>

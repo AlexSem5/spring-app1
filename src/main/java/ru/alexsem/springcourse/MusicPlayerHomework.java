@@ -1,4 +1,4 @@
-package ru.alexsem.springcource;
+package ru.alexsem.springcourse;
 
 import java.util.ArrayList;
 import java.util.List;

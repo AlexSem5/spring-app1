@@ -1,14 +1,14 @@
-package ru.alexsem.springcource;
+package ru.alexsem.springcourse;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class TestSpring_lesson4 {
+public class TestSpring_homework {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
         );
 //        Music music = context.getBean("musicBean", Music.class);
-        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+        MusicPlayerHomework musicPlayer = context.getBean("musicPlayerHomework", MusicPlayerHomework.class);
         musicPlayer.playMusic();
         context.close();
     }
